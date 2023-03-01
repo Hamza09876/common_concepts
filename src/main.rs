@@ -1,9 +1,11 @@
 fn main() {
-    let mut x = 5;
-    println!("{}",x);
-    x = 6;
-    println!("{}",x);
+    let mut counter = 0;
+    let result = loop{
+        counter += 1;
 
-    const KILLER: u32 = 100000;
-    println!("{}",KILLER);
+        if counter == 10{
+            break counter;
+        }
+    };
+    println!("{}",result);
 }
